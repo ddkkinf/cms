@@ -1,0 +1,21 @@
+server:
+  port: 26080
+  display-name: SpringTutorial
+
+spring:
+  thymeleaf:
+    prefix: classpath:/static/html/
+    mode: LEGACYHTML5
+  profiles.default: local
+
+---
+
+spring:
+  profiles:
+      active: local
+
+application:
+  deploy-phase: local
+  log.level: debug
+
+---
