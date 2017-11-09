@@ -4,14 +4,12 @@
  * Copyright 2017 Line Plus Corp. All rights Reserved.
  * Line Plus PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package com.linecorp.cms.controller;
+package dev.argent.cms.controller;
 
-import com.linecorp.cms.config.ApplicationSetting;
+import dev.argent.cms.config.ApplicationSetting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
