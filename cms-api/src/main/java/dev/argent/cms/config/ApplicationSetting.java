@@ -1,4 +1,4 @@
-package com.linecorp.cms.config;
+package dev.argent.cms.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

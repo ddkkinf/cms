@@ -4,9 +4,9 @@
  * Copyright 2017 Line Plus Corp. All rights Reserved.
  * Line Plus PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package com.linecorp.cms;
+package dev.argent.cms;
 
-import com.linecorp.cms.config.ApplicationSetting;
+import dev.argent.cms.config.ApplicationSetting;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * @author Yonghun.kim@linecorp.com
  */
-@ComponentScan(basePackages = "com.linecorp.cms")
+@ComponentScan(basePackages = "dev.argent.cms")
 @SpringBootApplication
 @EnableConfigurationProperties(ApplicationSetting.class)
 public class Application {
