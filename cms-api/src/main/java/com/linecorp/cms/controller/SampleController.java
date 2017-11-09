@@ -4,9 +4,11 @@
  * Copyright 2017 Line Plus Corp. All rights Reserved.
  * Line Plus PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package com.linecorp.test.com.linecorp.test.controller;
+package com.linecorp.cms.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.linecorp.cms.config.ApplicationSetting;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -14,9 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class SampleController {
+    @Autowired
+    ApplicationSetting applicationSetting;
 
-    @RequestMapping("/sample")
+    @GetMapping("/")
     String sample() {
-        return "Hello World!";
+        return applicationSetting.getDeployPhase();
     }
 }

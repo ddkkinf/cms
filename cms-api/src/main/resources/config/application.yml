@@ -1,0 +1,19 @@
+server:
+  port: 26080
+  display-name: SpringTutorial
+
+spring:
+  thymeleaf.prefix: classpath:/static/
+  profiles.default: local
+
+---
+
+spring:
+  profiles:
+      active: local
+
+application:
+  deploy-phase: local
+  log.level: debug
+
+---

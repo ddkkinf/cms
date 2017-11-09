@@ -4,17 +4,20 @@
  * Copyright 2017 Line Plus Corp. All rights Reserved.
  * Line Plus PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package com.linecorp.test;
+package com.linecorp.cms;
 
+import com.linecorp.cms.config.ApplicationSetting;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author Yonghun.kim@linecorp.com
  */
-@ComponentScan
-@EnableAutoConfiguration
+@ComponentScan(basePackages = "com.linecorp.cms")
+@SpringBootApplication
+@EnableConfigurationProperties(ApplicationSetting.class)
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
