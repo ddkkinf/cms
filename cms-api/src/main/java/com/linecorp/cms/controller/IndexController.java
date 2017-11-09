@@ -8,19 +8,22 @@ package com.linecorp.cms.controller;
 
 import com.linecorp.cms.config.ApplicationSetting;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Yonghun.kim@linecorp.com
  */
-@RestController
-public class SampleController {
+@Controller
+public class IndexController {
     @Autowired
     ApplicationSetting applicationSetting;
 
-    @GetMapping("/")
-    String sample() {
-        return applicationSetting.getDeployPhase();
+    @GetMapping("/index")
+    public ModelAndView index() {
+        return new ModelAndView().addObject("deployPhase", applicationSetting.getDeployPhase());
     }
 }

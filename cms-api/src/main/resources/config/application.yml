@@ -3,7 +3,9 @@ server:
   display-name: SpringTutorial
 
 spring:
-  thymeleaf.prefix: classpath:/static/
+  thymeleaf:
+    prefix: classpath:/static/html/
+    mode: LEGACYHTML5
   profiles.default: local
 
 ---
